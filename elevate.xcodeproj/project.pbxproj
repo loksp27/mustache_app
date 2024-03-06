@@ -12,6 +12,8 @@
 		E25B81822B97FB16009864BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81812B97FB16009864BB /* Item.swift */; };
 		E25B81842B97FB17009864BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25B81832B97FB17009864BB /* Assets.xcassets */; };
 		E25B81872B97FB17009864BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25B81862B97FB17009864BB /* Preview Assets.xcassets */; };
+		E25B818F2B97FF6B009864BB /* VideoRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B818E2B97FF6B009864BB /* VideoRecordingView.swift */; };
+		E25B81912B98003F009864BB /* SavedVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81902B98003F009864BB /* SavedVideosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E25B81832B97FB17009864BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25B81862B97FB17009864BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E25B81882B97FB17009864BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25B818E2B97FF6B009864BB /* VideoRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingView.swift; sourceTree = "<group>"; };
+		E25B81902B98003F009864BB /* SavedVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVideosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				E25B81832B97FB17009864BB /* Assets.xcassets */,
 				E25B81882B97FB17009864BB /* Info.plist */,
 				E25B81852B97FB17009864BB /* Preview Content */,
+				E25B818E2B97FF6B009864BB /* VideoRecordingView.swift */,
+				E25B81902B98003F009864BB /* SavedVideosView.swift */,
 			);
 			path = elevate;
 			sourceTree = "<group>";
@@ -143,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25B81802B97FB16009864BB /* ContentView.swift in Sources */,
+				E25B81912B98003F009864BB /* SavedVideosView.swift in Sources */,
 				E25B81822B97FB16009864BB /* Item.swift in Sources */,
+				E25B818F2B97FF6B009864BB /* VideoRecordingView.swift in Sources */,
 				E25B817E2B97FB16009864BB /* elevateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

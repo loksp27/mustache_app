@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SavedVideosView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+                    Text("Saved Videos Tab")
+                        .font(.title)
+                    // Your list of saved videos would be displayed here
+                }
     }
 }
 

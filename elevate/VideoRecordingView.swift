@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import ARKit
+import SceneKit
 
 struct VideoRecordingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+                    Text("Video Recording Tab")
+                .font(.title)
+                
+                    // Your camera view and recording button would go here
+                }
     }
 }
 
