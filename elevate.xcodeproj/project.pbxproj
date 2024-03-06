@@ -12,8 +12,14 @@
 		E25B81822B97FB16009864BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81812B97FB16009864BB /* Item.swift */; };
 		E25B81842B97FB17009864BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25B81832B97FB17009864BB /* Assets.xcassets */; };
 		E25B81872B97FB17009864BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25B81862B97FB17009864BB /* Preview Assets.xcassets */; };
-		E25B818F2B97FF6B009864BB /* VideoRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B818E2B97FF6B009864BB /* VideoRecordingView.swift */; };
 		E25B81912B98003F009864BB /* SavedVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81902B98003F009864BB /* SavedVideosView.swift */; };
+		E25B81932B98051A009864BB /* ARFaceTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81922B98051A009864BB /* ARFaceTrackingView.swift */; };
+		E25B81952B9807ED009864BB /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81942B9807ED009864BB /* CameraManager.swift */; };
+		E25B81992B98226E009864BB /*  VideoRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81982B98226E009864BB /*  VideoRecordingView.swift */; };
+		E25B819B2B98235B009864BB /* VideoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B819A2B98235B009864BB /* VideoScreen.swift */; };
+		E25B819D2B98237C009864BB /* TagPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B819C2B98237C009864BB /* TagPopup.swift */; };
+		E25B819F2B9823CE009864BB /* RecordingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B819E2B9823CE009864BB /* RecordingListScreen.swift */; };
+		E25B81A12B982413009864BB /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B81A02B982413009864BB /* Recording.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +30,14 @@
 		E25B81832B97FB17009864BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25B81862B97FB17009864BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E25B81882B97FB17009864BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E25B818E2B97FF6B009864BB /* VideoRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingView.swift; sourceTree = "<group>"; };
 		E25B81902B98003F009864BB /* SavedVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVideosView.swift; sourceTree = "<group>"; };
+		E25B81922B98051A009864BB /* ARFaceTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceTrackingView.swift; sourceTree = "<group>"; };
+		E25B81942B9807ED009864BB /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		E25B81982B98226E009864BB /*  VideoRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " VideoRecordingView.swift"; sourceTree = "<group>"; };
+		E25B819A2B98235B009864BB /* VideoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoScreen.swift; sourceTree = "<group>"; };
+		E25B819C2B98237C009864BB /* TagPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPopup.swift; sourceTree = "<group>"; };
+		E25B819E2B9823CE009864BB /* RecordingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingListScreen.swift; sourceTree = "<group>"; };
+		E25B81A02B982413009864BB /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,14 @@
 				E25B81832B97FB17009864BB /* Assets.xcassets */,
 				E25B81882B97FB17009864BB /* Info.plist */,
 				E25B81852B97FB17009864BB /* Preview Content */,
-				E25B818E2B97FF6B009864BB /* VideoRecordingView.swift */,
 				E25B81902B98003F009864BB /* SavedVideosView.swift */,
+				E25B81922B98051A009864BB /* ARFaceTrackingView.swift */,
+				E25B81942B9807ED009864BB /* CameraManager.swift */,
+				E25B81982B98226E009864BB /*  VideoRecordingView.swift */,
+				E25B819A2B98235B009864BB /* VideoScreen.swift */,
+				E25B819C2B98237C009864BB /* TagPopup.swift */,
+				E25B819E2B9823CE009864BB /* RecordingListScreen.swift */,
+				E25B81A02B982413009864BB /* Recording.swift */,
 			);
 			path = elevate;
 			sourceTree = "<group>";
@@ -148,10 +166,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25B81A12B982413009864BB /* Recording.swift in Sources */,
 				E25B81802B97FB16009864BB /* ContentView.swift in Sources */,
+				E25B81952B9807ED009864BB /* CameraManager.swift in Sources */,
+				E25B819D2B98237C009864BB /* TagPopup.swift in Sources */,
+				E25B819F2B9823CE009864BB /* RecordingListScreen.swift in Sources */,
 				E25B81912B98003F009864BB /* SavedVideosView.swift in Sources */,
+				E25B819B2B98235B009864BB /* VideoScreen.swift in Sources */,
+				E25B81992B98226E009864BB /*  VideoRecordingView.swift in Sources */,
 				E25B81822B97FB16009864BB /* Item.swift in Sources */,
-				E25B818F2B97FF6B009864BB /* VideoRecordingView.swift in Sources */,
+				E25B81932B98051A009864BB /* ARFaceTrackingView.swift in Sources */,
 				E25B817E2B97FB16009864BB /* elevateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
