@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct SavedVideosView: View {
+    let recordings = [Recording(videoPath: "path/to/video1", duration: 120, tag: "Fun"), Recording(videoPath: "path/to/video2", duration: 45, tag: "Vacation")]
     var body: some View {
-        VStack {
-                    Text("Saved Videos Tab")
-                        .font(.title)
-                    // Your list of saved videos would be displayed here
-                }
+        NavigationView {
+                   
+            List(recordings) { recording in
+                       VStack(alignment: .leading) {
+                           Text("Tag: \(recording.tag)")
+                           Text("Duration: \(recording.duration) seconds")
+                       }
+                   }
+                   .navigationBarTitle("Recordings")
+                   .navigationBarItems(trailing: NavigationLink(destination: VideoScreen()) {
+                       Text("New Recording")
+                   })
+               }
     }
 }
 

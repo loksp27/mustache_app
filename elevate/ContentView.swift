@@ -6,68 +6,88 @@
 //
 
 import SwiftUI
-import SwiftData
+import AVFoundation
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @StateObject private var cameraManager = CameraManager()
 
     var body: some View {
-        TabView {
-                   VideoRecordingView()
-                       .tabItem {
-                           Image(systemName: "video.fill")
-                           Text("Record")
-                       }
-                   
-                   SavedVideosView()
-                       .tabItem {
-                           Image(systemName: "folder.fill")
-                           Text("Saved")
-                       }
-               }
-//        NavigationSplitView {
-//            List {
-//                ForEach(items) { item in
-//                    NavigationLink {
-//                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-//                    } label: {
-//                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-//                    }
-//                }
-//                .onDelete(perform: deleteItems)
-//            }
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    EditButton()
-//                }
-//                ToolbarItem {
-//                    Button(action: addItem) {
-//                        Label("Add Item", systemImage: "plus")
-//                    }
-//                }
-//            }
-//        } detail: {
-//            Text("Select an item")
-//        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+        VStack {
+            if let layer = cameraManager.previewLayer {
+                CameraPreview(previewLayer: layer)
+                    .frame(height: 400)
+            } else {
+                Text("Unable to access the camera.").bold().italic()
             }
+            HStack {
+                Button("Start Recording") {
+                    cameraManager.startRecording()
+                }
+                .padding()
+                .foregroundColor(.green)
+
+                Button("Stop Recording") {
+                    cameraManager.stopRecording()
+                }
+                .padding()
+                .foregroundColor(.red)
+            }
+        }
+        .onAppear {
+            cameraManager.setupSession()
+        }
+        TabView {
+            VideoRecordingView()
+                   .tabItem {
+                    Image(systemName: "video.fill")
+                    Text("Record")
+                  }
+           
+            SavedVideosView()
+             .tabItem {
+             Image(systemName: "folder.fill")
+             Text("Saved")
+             }
         }
     }
 }
 
+struct CameraPreview: UIViewRepresentable {
+    var previewLayer: AVCaptureVideoPreviewLayer
+
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView(frame: UIScreen.main.bounds)
+        previewLayer.frame = view.bounds
+        view.layer.addSublayer(previewLayer)
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+}
+
+//
+//struct ContentView: View {
+//    @Environment(\.modelContext) private var modelContext
+//    @Query private var items: [Item]
+//
+//        var body: some View {
+//    //        VideoRecordingView()
+//    //        TabView {
+//    //                   VideoRecordingView()
+//    //                       .tabItem {
+//    //                           Image(systemName: "video.fill")
+//    //                           Text("Record")
+//    //                       }
+//    //
+//    //                   SavedVideosView()
+//    //                       .tabItem {
+//    //                           Image(systemName: "folder.fill")
+//    //                           Text("Saved")
+//    //                       }
+//    //               }    }
+//
+//
+//}
 #Preview {
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
